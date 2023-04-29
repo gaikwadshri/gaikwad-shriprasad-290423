@@ -55,15 +55,23 @@ public class CustomerServiceImpl implements CustomerService {
 						"Unable to create customer. Mobile number already present.");
 			}
 		}
-		
-		
-		
-		for (MobileNumber mobileNumber : mobileNumbers) {
-			
-		}
-		
 		customerRepository.save(customer);
 
 		return new ResponseEntity<>("Customer created successfully.", HttpStatus.OK);
+	}
+
+	@Override
+	public ResponseEntity<Object> removeCustomer(String mobileNumber) {
+		Optional<MobileNumber> existingCustomer = mobileNumberRepository.findByMobileNumber(mobileNumber);
+		if (!existingCustomer.isPresent()) {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+					"Unable to delete customer. Mobile number is not registered.");
+		} else {
+			MobileNumber mobileNumberData = existingCustomer.get();
+			Long customerId = mobileNumberData.getCustomer().getId();
+			mobileNumberRepository.deleteByCustomerId(customerId);
+			customerRepository.deleteById(customerId);
+			return new ResponseEntity<>("Customer removed successfully.", HttpStatus.OK);
+		}
 	}
 }

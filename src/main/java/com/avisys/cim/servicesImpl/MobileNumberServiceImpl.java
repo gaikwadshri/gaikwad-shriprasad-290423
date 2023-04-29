@@ -23,4 +23,10 @@ public class MobileNumberServiceImpl implements MobileNumberService {
 
 		return mobileNumberRepository.findByMobileNumber(mobileNumber);
 	}
+
+	@Override
+	public void deleteByCustomerId(Long Custome_id) {
+	
+		mobileNumberRepository.deleteByCustomerId(Custome_id);
+	}
 }

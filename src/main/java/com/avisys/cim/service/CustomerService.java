@@ -15,4 +15,6 @@ public interface CustomerService {
 
 	ResponseEntity<Object> save(Customer customer);
 
+	ResponseEntity<Object> removeCustomer(String mobileNumber);
+
 }
