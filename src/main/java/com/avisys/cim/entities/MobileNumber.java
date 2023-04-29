@@ -24,7 +24,7 @@ public class MobileNumber {
 
 	@JsonIgnore
 	@ManyToOne
-	@JoinColumn(name = "customer_id")
+	
 	private Customer customer;
 
 	public Long getMobile_No_id() {

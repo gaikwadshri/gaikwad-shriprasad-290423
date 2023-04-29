@@ -6,7 +6,7 @@ CREATE TABLE customer (
 
 CREATE TABLE mobile_numbers (
   mobile_no_id INT NOT NULL PRIMARY KEY,
-  customer_id INT NOT NULL,
+  customer_id INT,
   mobile_number VARCHAR(10) NOT NULL,
   CONSTRAINT fk_customer
     FOREIGN KEY (customer_id) 
