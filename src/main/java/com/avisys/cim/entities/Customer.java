@@ -1,10 +1,16 @@
 package com.avisys.cim.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -12,7 +18,7 @@ import jakarta.persistence.Table;
 public class Customer {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	@Column(name = "FIRST_NAME", nullable = false)
@@ -21,8 +27,8 @@ public class Customer {
 	@Column(name = "LAST_NAME", nullable = false)
 	private String lastName;
 
-	@Column(name = "MOBILE_NUMBER", unique = true, nullable = false)
-	private String mobileNumber;
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<MobileNumber> mobileNumbers = new ArrayList<>();
 
 	public Long getId() {
 		return id;
@@ -48,12 +54,14 @@ public class Customer {
 		this.lastName = lastName;
 	}
 
-	public String getMobileNumber() {
-		return mobileNumber;
+	public List<MobileNumber> getMobileNumbers() {
+		return mobileNumbers;
 	}
 
-	public void setMobileNumber(String mobileNumber) {
-		this.mobileNumber = mobileNumber;
+	public void setMobileNumbers(List<MobileNumber> mobileNumbers) {
+		this.mobileNumbers = mobileNumbers;
 	}
+
+	
 
 }

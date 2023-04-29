@@ -7,17 +7,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.avisys.cim.dto.CustomerDTO;
 import com.avisys.cim.entities.Customer;
+import com.avisys.cim.entities.MobileNumber;
 import com.avisys.cim.repository.CustomerRepository;
+import com.avisys.cim.repository.MobileNumberRepository;
 import com.avisys.cim.service.CustomerService;
 
+import jakarta.transaction.Transactional;
+
 @Service
+@Transactional
 public class CustomerServiceImpl implements CustomerService {
 
 	@Autowired
 	private CustomerRepository customerRepository;
+
+	@Autowired
+	private MobileNumberRepository mobileNumberRepository;
 
 	@Override
 	public List<Customer> findAll() {
@@ -32,23 +41,22 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public Optional<Customer> findByMobileNumber(String mobileNumber) {
+	public ResponseEntity<Object> save(Customer customer) {
 
-		return customerRepository.findByMobileNumber(mobileNumber);
-	}
+		List<MobileNumber> mobileNumbers = customer.getMobileNumbers();
 
-	@Override
-	public ResponseEntity<Object>  save(Customer customer) {
+		// check mobile Number already present in database or not
 
-		  String mobileNumber = customer.getMobileNumber();
+		for (MobileNumber mobileNumber : mobileNumbers) {
+			Optional<MobileNumber> existingCustomer = mobileNumberRepository
+					.findByMobileNumber(mobileNumber.getMobileNumber());
+			if (existingCustomer.isPresent()) {
+				throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+						"Unable to create customer. Mobile number already present.");
+			}
+		}
+		customerRepository.save(customer);
 
-	        // check mobile Number already present in database or not  
-	        Optional<Customer> existingCustomer = customerRepository.findByMobileNumber(mobileNumber);
-	        if (existingCustomer.isPresent()) {
-	            return new ResponseEntity<>("Unable to create Customer. Mobile number already present.", HttpStatus.INTERNAL_SERVER_ERROR);
-	        }else {	      
-	        customerRepository.save(customer);
-
-	        return new ResponseEntity<>("Customer created successfully.", HttpStatus.OK);	}
+		return new ResponseEntity<>("Customer created successfully.", HttpStatus.OK);
 	}
 }

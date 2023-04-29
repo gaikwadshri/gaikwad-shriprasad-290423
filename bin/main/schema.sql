@@ -1,12 +1,20 @@
 CREATE TABLE customer (
-	id BIGINT not null,
-	first_name varchar(100) not null,
-	last_name varchar(100) not null,
-	mobile_number varchar(15) not null
+  id INT NOT NULL PRIMARY KEY,
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL
 );
-ALTER TABLE customer ADD CONSTRAINT customer_uk1 UNIQUE (mobile_number);
 
-CREATE SEQUENCE IF NOT EXISTS CUSTOMER_SEQ START WITH 54 INCREMENT BY 1;
+CREATE TABLE mobile_numbers (
+  mobile_no_id INT NOT NULL PRIMARY KEY,
+  customer_id INT NOT NULL,
+  mobile_number VARCHAR(10) NOT NULL,
+  CONSTRAINT fk_customer
+    FOREIGN KEY (customer_id) 
+    REFERENCES customer(id)
+);
+
+CREATE SEQUENCE IF NOT EXISTS CUSTOMER_SEQ START WITH 100 INCREMENT BY 1;
+CREATE SEQUENCE IF NOT EXISTS MOBILE_NUMBERS_SEQ START WITH 200 INCREMENT BY 1;
 
 
 

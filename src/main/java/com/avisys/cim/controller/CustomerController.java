@@ -22,9 +22,8 @@ public class CustomerController {
 
 	@Autowired
 	private CustomerService customerService;
-	
-	
-	// Task 1 
+
+	// Task 1
 
 	@GetMapping("/getall")
 	public List<Customer> getAllCustomers() {
@@ -47,14 +46,14 @@ public class CustomerController {
 
 		return ResponseEntity.ok(customers);
 	}
-	
-	// Task 2 
-	
-	 @PostMapping("/create")
-	    public ResponseEntity<Object> createCustomer(@RequestBody Customer customer) {
-	        
-	        return  customerService.save(customer);
-	    }
-	
-	
+
+	// Task 2
+
+	@PostMapping("/create")
+	public ResponseEntity<Object> createCustomer(@RequestBody Customer customer) {
+
+		return customerService.save(customer);
+	}
+
+	// Task 3
 }
