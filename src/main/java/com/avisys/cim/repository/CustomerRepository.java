@@ -1,6 +1,7 @@
 package com.avisys.cim.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -18,5 +19,8 @@ public interface CustomerRepository extends JpaRepository<Customer,Long>{
     List<Customer> findByFilter(@Param("firstName") String firstName,
                                 @Param("lastName") String lastName,
                                 @Param("mobileNumber") String mobileNumber);
+    
+    
+	Optional<Customer> findByMobileNumber(String mobileNumber);
 
 }

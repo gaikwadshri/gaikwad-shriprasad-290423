@@ -1,8 +1,10 @@
 package com.avisys.cim.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,8 +22,11 @@ public class CustomerController {
 
 	@Autowired
 	private CustomerService customerService;
+	
+	
+	// Task 1 
 
-	@GetMapping("/all")
+	@GetMapping("/getall")
 	public List<Customer> getAllCustomers() {
 		return customerService.findAll();
 	}
@@ -42,4 +47,14 @@ public class CustomerController {
 
 		return ResponseEntity.ok(customers);
 	}
+	
+	// Task 2 
+	
+	 @PostMapping("/create")
+	    public ResponseEntity<Object> createCustomer(@RequestBody Customer customer) {
+	        
+	        return  customerService.save(customer);
+	    }
+	
+	
 }
