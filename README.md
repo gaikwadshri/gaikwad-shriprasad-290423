@@ -53,13 +53,7 @@ Screenshot of all Test Cases
 6 Ability to update mobile number for an existing customer.
      * 6.1  Ability so that for an **existing** customer a mobile number can be added.
      ![Screenshot (11)](https://user-images.githubusercontent.com/132081954/235355534-7ea43b3f-a2ce-46d2-ab7e-2e009f3ca7f5.png)
-
      ![Screenshot (12)](https://user-images.githubusercontent.com/132081954/235355520-9772088c-be40-4324-899e-59d2adedff20.png)
-
-     
-     
-     
-     
      6.2 Provision give to delete the mobile number from existing customer
      
       ![Screenshot (13)](https://user-images.githubusercontent.com/132081954/235355540-e876dc8e-9671-475a-9b9e-ed6be93f334e.png)
