@@ -12,7 +12,7 @@ Screenshot of all Test Cases
 ![Screenshot (17)](https://user-images.githubusercontent.com/132081954/235355832-9f9299ff-c742-4ece-9631-18539f7f9dc9.png)
 
 
-2.2 Exception provided that the Customer should be only created if the mobile number is not already present in DB with response 500 status.
+2.2 Exception provided with response 500 status that the Customer should be only created if the mobile number is not already present in DB 
 ![Screenshot (5)](https://user-images.githubusercontent.com/132081954/235355798-c8f0625e-89dd-4e1a-9fdc-9d088bfd13e7.png)  
  2.3 If the mobile number is larger than 10 then also excpetion provided 
   ![Screenshot (6)](https://user-images.githubusercontent.com/132081954/235355811-0cbfa541-b6d0-4104-addf-45f1ed25e23a.png)
@@ -41,14 +41,13 @@ Screenshot of all Test Cases
      ![Screenshot (12)](https://user-images.githubusercontent.com/132081954/235355520-9772088c-be40-4324-899e-59d2adedff20.png)
 
      
-     * There should be a way to delete a mobile number from an **existing** customer.
-     ![Screenshot (12)](https://user-images.githubusercontent.com/132081954/235355592-d2b18746-829c-4359-a6b2-d1fee7b75bf0.png)
-
+     6.2 Provision give to delete the mobile number from existing customer
+     
       ![Screenshot (13)](https://user-images.githubusercontent.com/132081954/235355540-e876dc8e-9671-475a-9b9e-ed6be93f334e.png)
       
       ![Screenshot (14)](https://user-images.githubusercontent.com/132081954/235355598-f3069a04-ef22-4051-bb31-ee700733a6e3.png)
-
+     6.3 Exception Provided if some one try to delete mobile number which is not present in the database
       ![Screenshot (15)](https://user-images.githubusercontent.com/132081954/235355612-6d262115-d333-4127-a935-9be7a2b0e03a.png)    
-
+     6.4 Exception provided if the customer have only one mobile number and customer try to delete this mobile number 
       ![Screenshot (15)](https://user-images.githubusercontent.com/132081954/235355639-1aeac881-c788-4565-8156-ce127adbea3d.png)
 
