@@ -1,4 +1,5 @@
 Screenshot of all Test Cases
+
 1.1 Get Customer information over an REST API call with any parameters
 ![Screenshot (3)](https://user-images.githubusercontent.com/132081954/235354734-18e8416b-5bcc-476c-9e7f-7b1086a7cf1b.png)
 
