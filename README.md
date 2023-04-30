@@ -1,12 +1,6 @@
-
-### Requirements
-1. Get Customer information over an REST API call
-    * Any third-party application should be able to get Customer related information in JSON format.
-    * The third-party should be able to request either all customer or filter information using any or all of the parameters like first name, last name and mobile number.
-    * First name and Last name should be able to return result which partially match. Example if we have a user with first name Kathy then if we get request using first name filter criteria as "Kat", "aTHY" or "Ath" then Kathy should be returned.
-    * For mobile number only exact match should be returned.
-    * Do not use native SQL only use JPQL or HQL.
-
+                                                         cdac-java-test
+API for Customer 
+Task 1: Get Customer information over an REST API call
 ![Screenshot (3)](https://user-images.githubusercontent.com/132081954/235352577-765ba2dc-6dd1-40d1-a8c2-c3339749831c.png)
 
 
