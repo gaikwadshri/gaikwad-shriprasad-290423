@@ -30,11 +30,9 @@ Screenshot of all Test Cases
    ![Screenshot (9)](https://user-images.githubusercontent.com/132081954/235355362-0e97e9ae-c02d-4ebc-8837-6bf0963d8e8f.png)
       
       
-      5. Provided ability to delete over REST API
+      5 Provided ability to delete over REST API
         ![Screenshot (10)](https://user-images.githubusercontent.com/132081954/235356171-fd5657dc-c0f8-45ba-9e56-3a71d3628209.png)
-        
-        
-6. Ability to update mobile number for an existing customer.
+6 Ability to update mobile number for an existing customer.
      * 6.1  Ability so that for an **existing** customer a mobile number can be added.
      ![Screenshot (11)](https://user-images.githubusercontent.com/132081954/235355534-7ea43b3f-a2ce-46d2-ab7e-2e009f3ca7f5.png)
 
