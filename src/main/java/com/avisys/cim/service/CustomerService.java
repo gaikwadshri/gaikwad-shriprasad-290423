@@ -17,4 +17,10 @@ public interface CustomerService {
 
 	ResponseEntity<Object> removeCustomer(String mobileNumber);
 
+	ResponseEntity<Object> addMobileNumber(String mobileNumber, String newMobileNumber);
+
+	ResponseEntity<Object> updateMobileNumber(String mobileNumber, String newMobileNumber);
+
+	ResponseEntity<Object> deleteCustomerMobileNumber(String mobileNumber);
+
 }
