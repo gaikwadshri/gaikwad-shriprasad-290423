@@ -9,18 +9,7 @@ Screenshot of all Test Cases
 
 
 
-2.0 Ability to create a new customer over REST API.
-    2.1 . Feature provided that third party application able to create a customer using REST API.
-    
-   ![Screenshot (17)](https://user-images.githubusercontent.com/132081954/235355042-a5aee6d1-4f71-4459-8639-3444db79beb0.png)
 
-    2.2 Exception provided that the Customer should be only created if the mobile number is not already present in DB with response 500 status.
-    
-    ![Screenshot (5)](https://user-images.githubusercontent.com/132081954/235355088-c34aec26-8a6f-4ed2-8b79-5f3910d44d21.png)
-
-    2.3 If the mobile number is larger than 10 then also excpetion provided 
-    
-    ![Screenshot (6)](https://user-images.githubusercontent.com/132081954/235355185-64bdd2dc-2aeb-46b4-bb4d-9649b22c224b.png)
 
    
 3. Application modifed to support multiple mobile number for a single customer.
