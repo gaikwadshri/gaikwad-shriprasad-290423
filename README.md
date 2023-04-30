@@ -31,7 +31,8 @@ Screenshot of all Test Cases
 
 5. Provided ability to delete over REST API
 
-   ![Screenshot (10)](https://user-images.githubusercontent.com/132081954/235355443-39eee269-8a33-4c62-abec-9ceec5e9d4ab.png)
+ ![Screenshot (10)](https://user-images.githubusercontent.com/132081954/235356171-fd5657dc-c0f8-45ba-9e56-3a71d3628209.png)
+
 
    
 6. Ability to update mobile number for an existing customer.
