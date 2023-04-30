@@ -1,6 +1,8 @@
 Screenshot of all Test Cases
 1.1 Get Customer information over an REST API call with any parameters
 ![Screenshot (3)](https://user-images.githubusercontent.com/132081954/235354734-18e8416b-5bcc-476c-9e7f-7b1086a7cf1b.png)
+
+
 1.2  For mobile number only exact match data provided
 ![Screenshot (4)](https://user-images.githubusercontent.com/132081954/235354739-f63dc883-27a6-45f8-bc71-a47d71bf5ee2.png)
 
