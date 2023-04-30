@@ -1,6 +1,5 @@
-                                                         cdac-java-test
-API for Customer 
-Task 1: Get Customer information over an REST API call
+Screenshot of all Test Cases
+1. Get Customer information over an REST API call
 ![Screenshot (3)](https://user-images.githubusercontent.com/132081954/235352577-765ba2dc-6dd1-40d1-a8c2-c3339749831c.png)
 
 
