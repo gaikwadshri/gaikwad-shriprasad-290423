@@ -9,19 +9,50 @@ Screenshot of all Test Cases
 
 
 
-2. Ability to create a new customer over REST API.
-    * Third party application should be able to create a customer using REST API.
-    * Customer should be only created if the mobile number is not already present in DB.
-    * If there is any error while creating the Customer appropriate message should be returned in response.
-    * For example lets say if we already have a mobile number in system and request is received for same mobile number then in response we should get 500 status with message "Unable to create Customer. Mobile number already present.".
-3. Modify the application to support multiple mobile number for a single customer.
-    * Currently application supports only one mobile number but client wants the ability to store multiple mobile number.
-    * That means a customer can contain at least one or multiple mobile numbers.
-    * Once a user fetches customer using REST API all the mobile numbers should be returned along with Customer details.
-4. Modify the application to be able to save a customer with multiple mobile number over REST API
-    * Ability so that a **new** customer having one or multiple mobile number can be saved. This is similar to requirement 2 but now that multiple mobile numbers are supported that will change.
-5. Ability to delete over REST API
-    * There should be a way to delete a customer by using mobile number.
+2.0 Ability to create a new customer over REST API.
+    * 2.1 . Feature provided that third party application able to create a customer using REST API.
+    
+    ![Screenshot (17)](https://user-images.githubusercontent.com/132081954/235355042-a5aee6d1-4f71-4459-8639-3444db79beb0.png)
+
+    * 2.2 Exception provided that the Customer should be only created if the mobile number is not already present in DB with response 500 status.
+    
+    ![Screenshot (5)](https://user-images.githubusercontent.com/132081954/235355088-c34aec26-8a6f-4ed2-8b79-5f3910d44d21.png)
+
+    * 2.3 If the mobile number is larger than 10 then also excpetion provided 
+    
+    ![Screenshot (6)](https://user-images.githubusercontent.com/132081954/235355185-64bdd2dc-2aeb-46b4-bb4d-9649b22c224b.png)
+
+   
+3. Application modifed to support multiple mobile number for a single customer.
+   ![Screenshot (7)](https://user-images.githubusercontent.com/132081954/235355280-76ffad02-41af-444f-955c-326aaa90339e.png)
+   
+   
+
+4.1 Application modifed to be able to save a customer with multiple mobile number over REST API
+   ![Screenshot (8)](https://user-images.githubusercontent.com/132081954/235355349-35262a2f-6131-4eff-9b66-03a7f651f87d.png)
+   4.2 Check provided to all the mobile number present in the New Customer 
+   ![Screenshot (9)](https://user-images.githubusercontent.com/132081954/235355362-0e97e9ae-c02d-4ebc-8837-6bf0963d8e8f.png)
+
+5. Provided ability to delete over REST API
+
+   ![Screenshot (10)](https://user-images.githubusercontent.com/132081954/235355443-39eee269-8a33-4c62-abec-9ceec5e9d4ab.png)
+
+   
 6. Ability to update mobile number for an existing customer.
-     * Ability so that for an **existing** customer a mobile number can be added.
+     * 6.1  Ability so that for an **existing** customer a mobile number can be added.
+     ![Screenshot (11)](https://user-images.githubusercontent.com/132081954/235355534-7ea43b3f-a2ce-46d2-ab7e-2e009f3ca7f5.png)
+
+     ![Screenshot (12)](https://user-images.githubusercontent.com/132081954/235355520-9772088c-be40-4324-899e-59d2adedff20.png)
+
+     
      * There should be a way to delete a mobile number from an **existing** customer.
+     ![Screenshot (12)](https://user-images.githubusercontent.com/132081954/235355592-d2b18746-829c-4359-a6b2-d1fee7b75bf0.png)
+
+      ![Screenshot (13)](https://user-images.githubusercontent.com/132081954/235355540-e876dc8e-9671-475a-9b9e-ed6be93f334e.png)
+      
+      ![Screenshot (14)](https://user-images.githubusercontent.com/132081954/235355598-f3069a04-ef22-4051-bb31-ee700733a6e3.png)
+
+      ![Screenshot (15)](https://user-images.githubusercontent.com/132081954/235355612-6d262115-d333-4127-a935-9be7a2b0e03a.png)    
+
+      ![Screenshot (15)](https://user-images.githubusercontent.com/132081954/235355639-1aeac881-c788-4565-8156-ce127adbea3d.png)
+
