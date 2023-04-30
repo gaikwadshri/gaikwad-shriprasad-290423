@@ -28,13 +28,12 @@ Screenshot of all Test Cases
    
    4.2 Check provided to all the mobile number present in the New Customer 
    ![Screenshot (9)](https://user-images.githubusercontent.com/132081954/235355362-0e97e9ae-c02d-4ebc-8837-6bf0963d8e8f.png)
-
-5. Provided ability to delete over REST API
-
- ![Screenshot (10)](https://user-images.githubusercontent.com/132081954/235356171-fd5657dc-c0f8-45ba-9e56-3a71d3628209.png)
-
-
-   
+      
+      
+      5. Provided ability to delete over REST API
+        ![Screenshot (10)](https://user-images.githubusercontent.com/132081954/235356171-fd5657dc-c0f8-45ba-9e56-3a71d3628209.png)
+        
+        
 6. Ability to update mobile number for an existing customer.
      * 6.1  Ability so that for an **existing** customer a mobile number can be added.
      ![Screenshot (11)](https://user-images.githubusercontent.com/132081954/235355534-7ea43b3f-a2ce-46d2-ab7e-2e009f3ca7f5.png)
@@ -50,5 +49,5 @@ Screenshot of all Test Cases
      6.3 Exception Provided if some one try to delete mobile number which is not present in the database
       ![Screenshot (15)](https://user-images.githubusercontent.com/132081954/235355612-6d262115-d333-4127-a935-9be7a2b0e03a.png)    
      6.4 Exception provided if the customer have only one mobile number and customer try to delete this mobile number 
-      ![Screenshot (15)](https://user-images.githubusercontent.com/132081954/235355639-1aeac881-c788-4565-8156-ce127adbea3d.png)
+    ![Screenshot (16)](https://user-images.githubusercontent.com/132081954/235356221-2d84084b-3a21-467b-a9b0-b3d85156b657.png)
 
